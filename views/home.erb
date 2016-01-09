@@ -1,0 +1,6 @@
+<% require './app/helpers/aws_storage.rb' %>
+<% bucket = AwsStorage.new %>
+
+<% bucket.gallery_names.each do |i| %>
+  <h3><a href=<%= "/gallery/" + i.gsub(' ','+') %>><%= i %></a></h3>
+<% end %>
